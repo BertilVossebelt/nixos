@@ -38,11 +38,11 @@
         chmod 644 "$HOME/.ssh/id_ed25519.pub"
       fi
     '';
+    };
 
-    home.activation.fixNixosPermissions = ''
-      if [ -d "/etc/nixos/.git" ]; then
-        chown -R ajv:users /etc/nixos
-      fi
-    '';
-  };
+  system.activationScripts.fixNixosPermissions.text = ''
+    if [ -d "/etc/nixos/.git" ]; then
+      chown -R ajv:users /etc/nixos
+    fi
+  '';
 }
