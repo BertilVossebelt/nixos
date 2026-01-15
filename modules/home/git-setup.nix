@@ -6,7 +6,6 @@
     home.homeDirectory = "/home/ajv";
     home.stateVersion = "25.11";
 
-    # Install and setup git
     programs.git = {
       enable = true;
       settings.user.name = "BertilVossebelt";
@@ -25,7 +24,6 @@
 
     services.ssh-agent.enable = true;
 
-    # Generate SSH key
     home.activation.generateSshKey = ''
       if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
         mkdir -p "$HOME/.ssh"
@@ -41,7 +39,6 @@
       fi
     '';
 
-    # Set correct permissions of nixos dir to ajv user for git use
     home.activation.fixNixosPermissions = ''
       if [ -d "/etc/nixos/.git" ]; then
         chown -R ajv:users /etc/nixos

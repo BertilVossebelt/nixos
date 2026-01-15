@@ -1,5 +1,5 @@
 {
-  description = "NixOS + Home Manager multi-host flake";
+  description = "Multi-host flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
@@ -12,10 +12,10 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
 
-    # Hosts we want to support
+    # Hosts
     hosts = ["nixos-desktop" "laptop"];
 
-    # Function to create a nixosSystem for a host
+    # Create a nixosSystem for a host
     makeConfig = host: let
       hostPath = ./hosts/${host}/configuration.nix;
       hostConfig = if builtins.pathExists hostPath then import hostPath else {};
@@ -30,14 +30,13 @@
         ./modules/system/packages.nix
         ./modules/system/desktop-kde.nix
         ./modules/system/users.nix
-        ./modules/system/home-git.nix
+        ./modules/home/git-setup.nix
 
         # Home Manager integration
         home-manager.nixosModules.home-manager
       ] ++ [ hostConfig ];
     };
   in
-
   {
     # Dynamically create nixosConfigurations for all hosts
     nixosConfigurations = builtins.listToAttrs (map (h: {
