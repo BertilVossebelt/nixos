@@ -5,5 +5,7 @@
     micro
     firefox-devedition
     signal-desktop
+    tidal-hifi
+    zapzap
   ];
 }

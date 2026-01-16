@@ -40,6 +40,9 @@
   # Zsh
   programs.zsh.enable = true;
 
+  # Dconf
+  programs.dconf.enable = true;
+
   # Turn off GUI passwords
   security.polkit.enable = true;
   security.polkit.extraConfig = ''
