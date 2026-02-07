@@ -55,7 +55,7 @@
             ];
 
             home.packages = [
-              inputs.affinity-nix.packages.${pkgs.system}.v3
+              affinity-nix.packages.${pkgs.system}.v3
             ];
 
             # Enable AppImages here:
