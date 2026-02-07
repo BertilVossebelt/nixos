@@ -3,6 +3,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    git
     OVMF
     micro
     firefox-devedition

@@ -6,7 +6,7 @@
     isNormalUser = true;
     description = "AJ Vossebelt";
     extraGroups = [ "wheel" "networkmanager" ];
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
     packages = with pkgs; [
       kdePackages.kate
     ];
