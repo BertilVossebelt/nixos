@@ -9,7 +9,7 @@
     affinity-nix.url = "github:mrshmllow/affinity-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, affinity-nix, ... } @ inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
