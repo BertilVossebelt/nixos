@@ -1,4 +1,4 @@
-# /etc/nixos/modules/audio.nix
+# /etc/nixos/modules/system/audio.nix
 { config, pkgs, ... }:
 
 {

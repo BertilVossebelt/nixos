@@ -1,4 +1,4 @@
-# /etc/nixos/modules/networking.nix
+# /etc/nixos/modules/system/networking.nix
 { config, pkgs, ... }:
 
 {

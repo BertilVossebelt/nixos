@@ -1,22 +1,13 @@
-# /etc/nixos/packages.nix
-{ config, pkgs, ... }:
+# /etc/nixos/modules/system/packages.nix
+{ config, pkgs, inputs, ... }:
 
 {
+  virtualisation.docker.enable = true;
   environment.systemPackages = with pkgs; [
     git
-    OVMF
     micro
-    firefox-devedition
-    signal-desktop
-    tidal-hifi
-    zapzap
-    slack
-    yaak
-    jetbrains.rider
-    # jetbrains.webstorm
-    # jetbrains.pycharm
-    # jetbrains.phpstorm
-    # jetbrains.idea
-    # davinci-resolve
+
+    # Add Home Manager CLI
+    inputs.home-manager.packages.${pkgs.system}.home-manager
   ];
 }

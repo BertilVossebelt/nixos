@@ -1,4 +1,4 @@
-# /etc/nixos/desktop-kde.nix
+# /etc/nixos/modules/system/desktop-kde.nix
 { config, pkgs, ... }:
 
 {

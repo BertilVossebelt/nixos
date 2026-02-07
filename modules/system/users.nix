@@ -1,11 +1,11 @@
-# /etc/nixos/users.nix
+# /etc/nixos/modules/system/users.nix
 { config, pkgs, ... }:
 
 {
   users.users.ajv = {
     isNormalUser = true;
     description = "AJ Vossebelt";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     shell = pkgs.bash;
     packages = with pkgs; [
       kdePackages.kate

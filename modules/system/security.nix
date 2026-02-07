@@ -1,4 +1,4 @@
-# /etc/nixos/modules/security.nix
+# /etc/nixos/modules/system/security.nix
 { config, pkgs, ... }:
 
 {

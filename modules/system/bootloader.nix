@@ -1,3 +1,4 @@
+# /etc/nixos/modules/system/bootloader.nix
 { config, pkgs, ... }:
 
 {
