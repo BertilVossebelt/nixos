@@ -1,3 +1,4 @@
+# /etc/nixos/desktop-kde.nix
 { config, pkgs, ... }:
 
 {

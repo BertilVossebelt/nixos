@@ -6,3 +6,4 @@
   boot.loader.efi.efiSysMountPoint = "/boot";
   boot.loader.grub.enable = false;
 }
+
