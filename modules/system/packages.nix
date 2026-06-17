@@ -2,10 +2,11 @@
 { config, pkgs, inputs, ... }:
 
 {
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = false;
   environment.systemPackages = with pkgs; [
     git
     micro
+    node
 
     # Add Home Manager CLI
     inputs.home-manager.packages.${pkgs.system}.home-manager
