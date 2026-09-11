@@ -35,6 +35,7 @@
         ./modules/system/security.nix
         ./modules/system/packages.nix
         ./modules/system/desktop-kde.nix
+        ./modules/system/desktop-hyprland.nix
         ./modules/system/users.nix
 
         # Add home-manager

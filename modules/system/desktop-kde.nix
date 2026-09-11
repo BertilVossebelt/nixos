@@ -11,7 +11,10 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
-    config.common.default = "kde";
+    config = {
+      common.default = "*";  # auto-select fallback for unknown sessions
+      KDE.default = [ "kde" ];
+    };
     # This helps apps like ZapZap use the native KDE file picker
     xdgOpenUsePortal = true;
   };
