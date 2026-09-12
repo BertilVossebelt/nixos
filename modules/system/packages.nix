@@ -11,5 +11,10 @@
     micro
     nodejs
     home-manager
+
+    # Break-glass: kept at system level so a terminal (autogen config binds
+    # SUPER+Q -> kitty) and a browser survive a home-manager wipe.
+    kitty
+    firefox-devedition
 ];
 }
