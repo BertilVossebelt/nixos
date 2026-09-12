@@ -10,3 +10,7 @@ result-*
 *-linux-x64/
 *.deb
 *.rpm
+
+# IDE
+.idea
+.junie

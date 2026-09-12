@@ -24,7 +24,7 @@
       hostConfig = if builtins.pathExists hostPath then import hostPath else {};
     in
     nixpkgs.lib.nixosSystem {
-      inherit system pkgs;
+      inherit pkgs;
       specialArgs = { inherit inputs; };
 
       modules = [
@@ -32,6 +32,7 @@
         ./modules/system/bootloader.nix
         ./modules/system/networking.nix
         ./modules/system/audio.nix
+        ./modules/system/bluetooth.nix
         ./modules/system/security.nix
         ./modules/system/packages.nix
         ./modules/system/desktop-kde.nix
