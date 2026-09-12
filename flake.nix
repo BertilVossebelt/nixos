@@ -4,7 +4,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    home-manager.url = "github:nix-community/home-manager/release-26.05";
   };
 
   outputs = { self, nixpkgs, ... } @ inputs:
@@ -38,9 +37,6 @@
         ./modules/system/desktop-kde.nix
         ./modules/system/desktop-hyprland.nix
         ./modules/system/users.nix
-
-        # Add home-manager
-        inputs.home-manager.nixosModules.home-manager
       ] ++ [ hostConfig ];
     };
   in

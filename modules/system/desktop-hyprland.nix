@@ -22,4 +22,7 @@
   # Hint Electron/Chromium apps to use Wayland natively
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Fix unpopulated/missing XDG application menus for standalone DEs
+  environment.etc."xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  environment.sessionVariables.XDG_MENU_PREFIX = "plasma-";
 }

@@ -10,8 +10,6 @@
     git
     micro
     nodejs
-
-    # Add Home Manager CLI
-    inputs.home-manager.packages.${pkgs.system}.home-manager
-  ];
+    home-manager
+];
 }
